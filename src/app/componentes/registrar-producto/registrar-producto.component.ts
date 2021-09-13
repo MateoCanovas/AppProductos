@@ -19,9 +19,14 @@ export class RegistrarProductoComponent {
   guardar() {
     console.log(this.producto);
     
-    this.producto.id = 
-    this.productoService.productos
-    [this.productoService.productos.length - 1].id + 1;
+    this.producto.id = 0;
+
+    if (this.productoService.productos.length > 0) {
+      this.producto.id = 
+      this.productoService.productos
+      [this.productoService.productos.length - 1].id + 1;
+    }
+    
     this.productoService.registrarproducto();
   }
 
@@ -36,7 +41,7 @@ export class RegistrarProductoComponent {
 
   borrar() {
     
-    if ((this.id > 0) && (this.id <= this.productoService.productos.length)) {
+    if ((this.id > 0)) {
       this.productoService.borrarProducto(this.id);
     }
   }

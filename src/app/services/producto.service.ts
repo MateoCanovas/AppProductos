@@ -48,8 +48,6 @@ export class ProductoService {
     //     break;
     //   }
     // });
-
-    console.log(this._productos);
     
       for (let index = 0; index < this._productos.length; index++) {
         const element = this._productos[index];
@@ -58,8 +56,6 @@ export class ProductoService {
           index = this._productos.length;
         }
       }
-
-      console.log(isNuevo);
       
       
       if (isNuevo) {
