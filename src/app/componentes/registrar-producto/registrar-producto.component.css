@@ -36,6 +36,8 @@
 
   p {
     position: relative;
+    margin-left: 20px; 
+    margin-top: 20px;
   }
   label {
     position: absolute;

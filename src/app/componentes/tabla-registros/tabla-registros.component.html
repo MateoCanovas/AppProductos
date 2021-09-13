@@ -1,0 +1,24 @@
+<div class="row"  style="margin: 20px;">
+    <table class="table table-striped table-dark" *ngIf="registro.length > 0">
+        <thead>
+            <tr>
+            <th>Id</th>
+            <th>Tipo</th>
+            <th>Cantidad</th>
+            <th>Precio</th>
+            <th>Detalle</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of registro">
+            <td>{{item.id}}</td>
+            <td>{{item.tipo | titlecase}}</td>
+            <td>{{item.cantidad | number}}</td>
+            <td>{{item.precio | number}}</td>
+            <td><nav>
+                <a routerLink="{{item.id}}">Ver detalle</a>
+            </nav></td>
+            </tr>
+        </tbody>
+    </table>
+</div>

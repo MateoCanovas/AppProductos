@@ -1,0 +1,82 @@
+<!-- <label style="margin: 20px;">Buscar por id</label>
+<input type="number" style="margin-left: 50px; width: 20%;"
+placeholder="Buscar producto por id"
+[(ngModel)]="id"> -->
+<div class="row">
+
+  <h3>Buscar</h3>
+
+    <hr>
+    <div class="row">
+      <div class="col" style="max-width: 30%;">
+        <p  style="margin-left: 20px; margin-top: 20px;">
+          <label>Buscar por id</label>
+          <input type="number"
+          placeholder="Buscar producto por id"
+          name="busqueda"
+          [(ngModel)]="id">
+        </p>
+        
+        
+        <button class="btn btn-outline-dark"
+        style="margin-left: 20px;"
+          (click)="buscar()">
+          Buscar
+        </button>
+      </div>
+
+      <div class="col">
+        <div class="col">
+          <div class="ro">
+            <p><strong>Selecciona el id y pulsa el botón buscar para obtenr el producto correspondiente al id seleccionado en caso de que este exista</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 30px;">Crear/Editar Producto</h3>
+
+    <hr>
+    <div class="row">
+      <div class="col" style="max-width: 30%;">
+        <!-- <form style="margin: 20px" (ngSubmit)="aux()"> -->
+          <p>
+            <label>Tipo</label>
+            <input type="text"
+            name="tipo"
+            [(ngModel)]="producto.tipo">
+          </p>
+      
+          <p>
+            <label>Cantidad</label>
+            <input type="number"
+            name="cantidad"
+            [(ngModel)]="producto.cantidad">
+          </p>
+      
+          <p>
+            <label>Precio</label>
+            <input type="number"
+            name="Precio"
+            [(ngModel)]="producto.precio">
+          </p>
+      
+          <button class="btn btn-outline-dark"
+          style="margin: 20px;"
+          (click)="guardar()">
+            Añadir
+          </button>
+      <!-- </form> -->
+      
+      <button class="btn btn-outline-dark"
+        style="margin: 20px;"
+        (click)="borrar()">Borrar</button>
+      </div>
+
+      <div class="col">
+
+      </div>
+
+    
+  </div>
+</div>
